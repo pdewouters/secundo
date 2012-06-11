@@ -1,0 +1,14 @@
+#footer { 
+    background: $black url(../images/black-texture.png) repeat 0 0; 
+    
+    .widget {
+        
+        .widgettitle { color: #fff; @include adjust-font-size-to(20px);  @include padding-leader; @include trailer; margin-top:0;}
+        p {@include adjust-font-size-to(14px); color: #fff;@include padding-trailer;@include margin-leader;}
+        a {
+            color: $orange;
+            text-decoration: none;
+        }
+        
+    }
+}

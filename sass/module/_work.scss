@@ -1,0 +1,25 @@
+.post-type-archive-project {
+    #projects{
+        @include pie-clearfix;
+        .element {
+            @include leader; @include trailer;
+            @include at-breakpoint(30em 16) { 
+                @include span-columns(8, 16);
+
+                &:nth-of-type(even) {
+                    @include omega;
+                }
+            }        
+            @include at-breakpoint(60em 16) { 
+                &:nth-of-type(even) {
+                    @include span-columns(4, 16);
+                }            
+
+                @include span-columns(4, 16);
+                &:nth-child(4n+4) {
+                    @include omega;
+                }
+            }
+        }
+     }
+}

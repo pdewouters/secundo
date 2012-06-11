@@ -1,0 +1,33 @@
+// Styles for the navigation menu
+#header{
+    #description { display: none; }
+    .widget-area {
+
+            @include leader;
+            .menu {
+                margin:0; padding: 0;
+                .menu-item {
+                    display: inline-block;
+                    a { 
+                        font-style:normal;
+                        font-family: "NewsCycle", sans-serif;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: $black;
+                        display: block;
+                        @include adjust-font-size-to(18px);
+                        padding: .5em;
+                     
+                    }
+
+                }
+
+                .current-menu-item a, .menu-item a:hover {
+                    background-color: $teal;
+                    color: #fff;
+                    @include border-radius;
+                }       
+            }
+       
+    }
+}

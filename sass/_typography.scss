@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5, h6 { text-transform: uppercase; color: $black; font-family: "NewsCycle", sans-serif;}
+
+#tagline #description { 
+        @include adjust-font-size-to($base-font-size * 3, $lines:2);
+        color: $black;
+        text-shadow: 0 3px rgba(#000, .2);
+        text-transform: uppercase;
+        text-align:center;
+        font-family: "NewsCycle", sans-serif;
+    }    
+    
+    h3 { @include leader;}

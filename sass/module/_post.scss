@@ -1,0 +1,7 @@
+.post {
+
+   border-bottom: 2px solid $teal;
+
+   
+   .post-info, .post-meta { @include trailer;@include leader;}
+}

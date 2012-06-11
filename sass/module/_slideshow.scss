@@ -1,0 +1,19 @@
+#slideshow {
+    background: $black url(../images/black-texture.png) repeat 0 0;
+    height: 28.5em;
+    .wrap { 
+       padding-top:0; padding-bottom:0;
+       position:relative;
+      .intro {
+            h2 { @include adjust-font-size-to(60px); font-family: "Newscycle", sans-serif;color: #fff; @include leader;} 
+            ul {
+                li { color: #fff; @include trailer;@include leader;}
+            }         
+          
+       }
+        .banner {
+                            
+        }    
+
+      }
+}

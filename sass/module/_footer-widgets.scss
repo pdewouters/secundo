@@ -1,0 +1,23 @@
+#footer-widgets {
+    @include trailer;
+    .widgettitle {@include trailer;@include adjust-font-size-to(20px);}
+    .featuredpost {
+        
+        .post {
+             border:0;
+             h2 a{ font-style: normal; @include adjust-font-size-to(30px);}       
+                    }
+            @include at-breakpoint(60em 16) { 
+                @include span-columns(10, 16);
+            }             
+     }
+     
+    .widget_text {
+        @include at-breakpoint(60em 16) { 
+            @include span-columns(5 omega, 16);
+         
+        }
+        
+        #tweets li {padding-bottom: 10px;}
+    }            
+}

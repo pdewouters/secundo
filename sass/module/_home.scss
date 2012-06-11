@@ -1,0 +1,111 @@
+#tagline {@include padding-leader; @include padding-trailer;}
+
+.home #services {
+    @include padding-leader; @include padding-trailer;
+    background: $teal url(../images/blue-texture.png) repeat 0 0;
+        
+        p {
+            display: table;
+            margin: 0 auto;
+            font-family: "NewsCycle", sans-serif;
+            @include adjust-font-size-to(40px);
+            color: #fff;
+            text-align:center;
+            img, span {display: table-cell; vertical-align: middle;}
+            a {margin-left: 20px; vertical-align:center;}
+        }
+}
+
+#recent-work {@include padding-leader; @include pie-clearfix;}
+#recent-work > p { 
+        font-family: "NewsCycle", sans-serif;
+        text-transform: uppercase; 
+        @include background-image( linear-gradient( transparent 0%, transparent 50%, $teal 51%, transparent 54%, transparent 100% ) );  
+        a { font-style: normal;}
+       span {background-color: $gray; margin-left: 10px; padding: 0 5px;}
+}
+#projects {
+    .project {
+
+        
+        background-color: $eggshell;
+        @include leader; @include trailer;
+        .thumbnail {
+         
+            @include at-breakpoint(60em 16) { 
+                @include span-columns(8,16); 
+                
+            }
+            p{
+                @include border-radius(96px);
+                width: 194px; height: 194px;
+                //-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+                @include box-shadow( inset -1px 4px 0 rgba(#000, .1), 0 0 0 3px $eggshell, 0 0 0 5px $teal);
+                img {
+                    @include opacity(0);
+                    padding: 10px;
+                }               
+            }
+
+
+        }
+        .content {
+            text-align:center;
+            @include at-breakpoint(60em 16) { 
+                @include span-columns(8 omega,16);
+                text-align: left;                
+            }
+
+            h3 {
+                 @include leader; @include trailer;
+                a{
+                font-style: normal;
+              text-decoration: none;                      
+              color: $orange;
+              @include adjust-font-size-to($base-font-size * 1.8, $lines:1.5); 
+                               
+                }
+            }
+           
+            p {
+                @include trailer(.5);
+                @include leader(.5);
+                
+            }
+
+        }        
+
+        @include at-breakpoint(60em 16) { 
+            @include span-columns(8,16);
+
+            &:nth-child(even) {
+                @include omega;
+            }
+        } // breakpoint        
+    } // project
+} // projects
+
+#testimonials {
+    background: $beige url(../images/beige-texture.png) repeat 0 0;
+
+    @include leader; @include trailer;
+    text-align: center;
+    
+    blockquote {
+        @include padding-leader; @include padding-trailer;
+        border-top: 2px solid $cream;
+        border-bottom: 2px solid $cream;
+        
+        p {     @include adjust-font-size-to(24px);}
+        cite {
+              font-style: italic; 
+              @include adjust-font-size-to(14px);
+              
+              &:before {
+                  content: "\2014";
+              }
+        }
+     }
+}
+    
+    

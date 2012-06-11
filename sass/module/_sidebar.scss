@@ -1,0 +1,22 @@
+.sidebar {
+    p { @include leader; @include trailer;}
+    @include trailer;
+    .widget {
+    .widgettitle { 
+                @include adjust-font-size-to(20px); 
+                @include leader;@include trailer;
+                @include background-image( linear-gradient( transparent 0%, transparent 50%, $teal 57%, transparent 57%, transparent 100% ) );               
+                
+                span {background-color: $gray; padding-right: 10px;}
+            }
+        li { }
+    }
+    
+    .searchform {
+        .s {}
+        
+        .searchsubmit {
+            @extend .button;            
+        }
+    }
+}

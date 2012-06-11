@@ -1,0 +1,96 @@
+// Site configuration and base settings
+//@import "normalize";
+@import "compass",
+        "compass/reset",
+        "susy-defaults",
+        "sassybuttons";
+
+@include establish-baseline;
+
+* {@include box-sizing(border-box);}
+$legacy-support-for-ie6: false;
+
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic);
+
+@include font-face(
+    "NewsCycle", 
+    font-files(
+        "../../fonts/NewsCycle-Regular-webfont.woff",
+        "../../fonts/NewsCycle-Regular-webfont.ttf",
+        "../../fonts/NewsCycle-Regular-webfont.svg" 
+    ), 
+    "../../fonts/NewsCycle-Regular-webfont.eot"
+);
+   
+
+
+// Colors
+
+// Main font color
+$body-copy-color: #262626;
+    
+// Orange headlines
+$orange: #cb623c;
+    
+//body background color
+$gray: #f2f2f2;
+
+// page title background color
+$teal: #90a9a9;
+
+//footer background color
+$black: #262626;
+
+// testimonials background color
+$beige: #d9cfa1;
+
+// testi border
+$cream: #e9e3c9;
+    
+// headlines color
+$red: #cb623c;
+
+// slideshow bg color
+$brown: #808080;
+
+// project area bg
+$eggshell: #f7f7f7;
+    
+// Base styles
+body { color: $body-copy-color; background: $gray url(../images/bg-texture.png) repeat 0 0; font-family: "Lora", Georgia, serif; }
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+     a {
+       
+       @include link-colors($orange, darken($orange, 10) );
+       font-style: italic;
+       text-decoration: none;          
+     }    
+     
+     .button {
+         font-family: "NewsCycle", sans-serif;
+             @include sassy-button("simple", 5px, 20px, #D06D47, #C45734);
+             font-style: normal;
+             text-transform: uppercase;
+             margin: .5em;
+             &:hover {color: #fff;}
+         }
+
+strong { font-weight: bold; }         

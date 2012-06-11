@@ -1,0 +1,54 @@
+     .navigation { 
+         @include pie-clearfix;
+       @include leader; @include trailer;
+       font-family: "NewsCycle", sans-serif;
+       text-transform: uppercase;
+       font-style: normal;
+       @include adjust-font-size-to(20px);
+       
+       .alignleft a{
+           padding-left: 10px;   
+           display: block;
+           &:before {
+                @extend .arrow-left;
+                display: block;
+                content: "";
+                float: left;
+                margin-right:10px;
+            }
+       }
+       
+       .alignright a{
+           padding-right: 10px;   
+           display: block;           
+            &:after {
+                margin-left:10px;
+                @extend .arrow-right;
+                display: block;
+                content: "";
+                float: right;
+
+            }
+       }
+     }
+     
+     .go-back {
+         @include pie-clearfix;
+       @include leader; @include trailer;
+       font-family: "NewsCycle", sans-serif;
+       text-transform: uppercase;
+       font-style: normal;
+       display: block;
+       @include adjust-font-size-to(20px);
+         a {
+           padding-left: 10px;   
+           display: block;
+           &:before {
+                @extend .arrow-up;
+                display: block;
+                content: "";
+                float: left;
+                margin-right:10px;
+            }             
+         }
+    }

@@ -1,0 +1,29 @@
+
+    
+    .gform_wrapper {
+        
+    h3.gform_title { @include leader ; @include adjust-font-size-to(30px);}
+    .gform_description {@include leader; @include trailer; display: block;}
+    .left_label .gfield_label {
+        text-transform: uppercase;
+        font-family: "NewsCycle", sans-serif;
+        @include adjust-font-size-to(20px);
+    }
+    
+    input[type="text"],
+    input[type="email"], 
+    textarea {
+       @include border-radius(5px); border: 0; line-height: 24px;
+       &:focus {outline: 1px solid $teal;}     
+            }
+            
+     li.gfield.gfield_error, 
+     li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning { background-color: lighten($red, 40) !important; }       
+}
+
+.gform_widget {
+    input { @include margin-trailer;}
+    label { color: #fff;}
+    .gform_footer {margin:0 !important;padding:0 !important;}    
+        
+        }
